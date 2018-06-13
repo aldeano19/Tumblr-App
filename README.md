@@ -10,3 +10,11 @@ Yonathan Ayenew](https://www.udemy.com/8-beautiful-ruby-on-rails-apps-in-30-days
 * Add Commets to Posts
 * Edit, Delete Comments in Posts
 * Delete all Comments associated to a Deleted Post 
+
+
+### Notes
+For Heroku to load the profile image, in `config/environments/production.rb` added: 
+
+    # Fallback to assets pipeline if a precompiled asset is missed.
+    config.assets.compile = true
+    config.assets.digest = true
