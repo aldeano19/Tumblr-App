@@ -13,7 +13,10 @@
 
   <body>
 
+
+
     <div id="sidebar">
+
       <ul>
         <li class="category"><%= link_to "Tumblr", root_path %></li>
         <% if user_signed_in? %>
@@ -24,6 +27,10 @@
     </div>
 
     <div id="main_content">
+      <%= link_to "https://github.com/aldeano19/Tumblr-App" do %>
+        <p> <%= fa_icon "github 3x" %>Sourcecode</p>
+      <% end %>
+
       <div id="header">
         <% if current_page?(root_path) %>
           <p>Post Feed</p>
@@ -49,6 +56,8 @@
       <% end %>
 
       <%= yield %>
+
+
     </div>
 
 
