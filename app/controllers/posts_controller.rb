@@ -7,11 +7,12 @@ class PostsController < ApplicationController
     # @posts = Post.all.order('created_at DESC')
     #
     # If there is no signed in user, redirect to about page.
-    if user_signed_in?
-      @posts = current_user.posts.order('created_at DESC')
-    else
-      redirect_to about_path
-    end
+    # if user_signed_in?
+    #   @posts = current_user.posts.order('created_at DESC')
+    # else
+    #   redirect_to about_path
+    # end
+    @posts = Post.all.order('created_at DESC')
   end
 
   def new
